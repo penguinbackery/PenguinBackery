@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title>Pengui backery</title>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -21,16 +21,19 @@
 </head>
 
 <body>
+  <button class="btn btn-danger btn-circle" id="btn-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <!-- nav bar starts here -->
   <nav class="navbar navbar-expand-md">
     <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0 col-md-5">
       <ul class="navbar-nav ml-md-auto text-center">
         <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Collection</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#counter">Counters</a></li>
       </ul>
     </div>
-    <div class="mb-sm-0 mx-md-auto flex-sm-row my-2 order-0 order-md-1 position-relative col-sm-12 col-md-2 w-100 text-center">
+    <div class="mb-sm-0 mx-md-auto flex-sm-row my-2 order-0 order-md-1 position-relative col-sm-12 col-md-2 col-lg-2 w-100 text-center">
       <a class="navbar-brand w-100 mx-md-auto" href="#">
         <img src="images/logo.png" class="w-100 img-responsive rounded-circle" />
       </a>
@@ -40,9 +43,9 @@
     </div>
     <div class="navbar-collapse collapse w-100 dual-collapse2 col-md-5 order-2 order-md-2">
       <ul class="navbar-nav mr-md-auto text-center">
-        <li class="nav-item"><a class="nav-link" href="#">Natural</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#client">Clients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#others">Others</a></li>
       </ul>
     </div>
   </nav>
@@ -60,17 +63,12 @@
         the same reliably satisfying experience while offering an exciting
         variety of products.
       </p>
-      <a class="btn btn-warning btn-jumbotron" href="#" role="button">Contact us</a>
+      <a class="btn btn-warning btn-jumbotron" href="#contact" role="button">Contact us</a>
     </div>
   </div>
 
   <!-- welcom carousel starts here  -->
   <div id="welcome" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="images/b4.jpg" class="d-block w-100" alt="..." />
@@ -86,16 +84,21 @@
   <!-- welcome image ends here -->
 
   <!-- menu starts here -->
-  <div class="container menu-wrapper px-5 rounded-border">
+  <div class="container menu-wrapper px-5 rounded-border" id="services">
     <div class="menu-header">
       <h4 class="text-uppercase text-bold text-center">main services</h4>
-      <hr class="text-center">
+      <hr class="text-center hr-menu">
     </div>
     <div class="row">
       <div class="col-md-4 col-lg-4">
         <div class="card">
-          <img src="https://www.dvpmarket.com/wp-content/uploads/2018/03/Banh-bong-lan-trung-muoi-hap-dan-thom-ngon.jpg"
-            class="card-img-top" alt="..." />
+          <div class="overlay-container">
+            <img src="https://www.dvpmarket.com/wp-content/uploads/2018/03/Banh-bong-lan-trung-muoi-hap-dan-thom-ngon.jpg"
+              class="image card-img-top" alt="..." />
+            <div class="middle">
+              <a href="#contact" data-content="Add to cart" data-toggle="popover" data-placement="top" class="btn btn-circle-cart"><i class="fas fa-cart-plus"></i></a>
+            </div>
+          </div>
           <div class="card-body">
             <p class="card-text">
               <h5 class="my-card-header text-uppercase text-bold">
@@ -111,8 +114,13 @@
       </div>
       <div class="col-md-4 col-lg-4">
         <div class="card">
-          <img src="https://www.whiskaffair.com/wp-content/uploads/2016/11/Coconut-Bread-Roll-4.jpg" class="card-img-top"
-            alt="..." />
+          <div class="overlay-container">
+            <img src="https://www.whiskaffair.com/wp-content/uploads/2016/11/Coconut-Bread-Roll-4.jpg" class="image card-img-top"
+              alt="..." />
+            <div class="middle">
+              <a href="#contact" class="btn btn-circle-cart" data-content="Add to cart" data-toggle="popover" data-placement="top"><i class="fas fa-cart-plus"></i></a>
+            </div>
+          </div>
           <div class="card-body">
             <p class="card-text">
               <h5 class="my-card-header text-uppercase text-bold">
@@ -128,8 +136,13 @@
       </div>
       <div class="col-md-4 col-lg-4">
         <div class="card">
-          <img src="https://foodal.com/wp-content/uploads/2009/01/Brusses%E2%80%99-Favorite-Banana-Bread-Cover.jpg"
-            class="card-img-top" alt="..." />
+          <div class="overlay-container">
+            <img src="https://foodal.com/wp-content/uploads/2009/01/Brusses%E2%80%99-Favorite-Banana-Bread-Cover.jpg"
+              class="card-img-top image" alt="..." />
+            <div class="middle">
+              <a href="#contact" class="btn btn-circle-cart" data-content="Add to cart" data-toggle="popover" data-placement="top"><i class="fas fa-cart-plus"></i></a>
+            </div>
+          </div>
           <div class="card-body">
             <p class="card-text">
               <h5 class="my-card-header text-uppercase text-bold">
@@ -148,10 +161,10 @@
   <!-- menu ends here -->
 
   <!-- counter starts here  -->
-  <section class="counter">
+  <section class="counter" id="counter">
     <div class="counter-header">
       <h4 class="text-uppercase text-bold text-center">Counters</h4>
-      <hr class="text-center">
+      <hr class="text-center hr-counter">
     </div>
     <div class="row div-counter">
       <div class="col-md-4 col-lg-4 text-center">
@@ -171,7 +184,7 @@
   <!-- counter ends here -->
 
   <!-- contact box starts here -->
-  <div class="contact-us">
+  <div class="contact-us" id="contact">
     <div class="container header-text">
       <h1 class="display-4 text-center">
         <small class="text-uppercase">Contact Us</small>
@@ -214,62 +227,66 @@
   <!-- contact box ends here -->
 
   <!-- clients saying  starts here -->
-  <div class="clients">
+  <div class="clients" id="client">
     <div class="row justify-content-center">
       <div class="text-center py-3">
         <h2>What do our client say?</h2>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div>
-        <div id="quote-carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#quote-carousel" data-slide-to="1"></li>
-            <li data-target="#quote-carousel" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <blockquote>
-                <div class="row justify-content-center">
-                  <div class="col-sm-12 col-md-3 text-right">
-                    <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.15752-9/49346051_409864869555196_1844670139891449856_n.jpg?_nc_cat=100&_nc_ht=scontent.ffra1-1.fna&oh=77c206bd11979504d9ec50dbd5fbbea3&oe=5CC525EB">
-                  </div>
-                  <div class="col-sm-12 col-md-9 my-quote text-left">
-                    <p>Tôi thường nghĩ bánh ngọt của Penguin Bakery cũng giống như tình yêu. Xinh đẹp trước mắt, ngọt ngào nơi đầu lưỡi, mềm mịn trong tay, đã thưởng thức được hết ngon ngọt của nó rồi thì khó lòng mà dừng lại</p>
-                    <small>Lưu Kim Khánh - chuyên gia công nghệ</small>
-                  </div>
+    <div class="row justify-content-center div-quotes">
+      <div id="quote-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <blockquote>
+              <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-3 text-right quote-div-img">
+                  <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.15752-9/49346051_409864869555196_1844670139891449856_n.jpg?_nc_cat=100&_nc_ht=scontent.ffra1-1.fna&oh=77c206bd11979504d9ec50dbd5fbbea3&oe=5CC525EB">
                 </div>
-              </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote>
-                <div class="row">
-                  <div class="col-md-3 col-sm-12 text-right">
-                    <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.0-0/p206x206/557446_471491732862014_216087201_n.jpg?_nc_cat=109&_nc_ht=scontent.ffra1-1.fna&oh=9b7a1492a3e7fcf43c0340f3861dc639&oe=5CC42371">
-                  </div>
-                  <div class="col-md-9 col-sm-12 my-quote text-left">
-                    <p>Nếu như ăn bánh của Penguin Backery là sai... thì tôi không cần đúng</p>
-                    <small>Lưu Hữu Duy - người vô danh</small>
-                  </div>
+                <div class="col-sm-12 col-md-9 my-quote text-left">
+                  <p>Tôi thường nghĩ bánh ngọt của Penguin Bakery cũng giống như tình yêu. Xinh đẹp trước mắt, ngọt
+                    ngào nơi đầu lưỡi, mềm mịn trong tay, đã thưởng thức được hết ngon ngọt của nó rồi thì khó lòng
+                    mà dừng lại</p>
+                  <small>Khánh Lưu - chuyên gia công nghệ</small>
                 </div>
-              </blockquote>
-            </div>
-            <div class="carousel-item">
-              <blockquote>
-                <div class="row">
-                  <div class="col-sm-12 col-md-3  text-right">
-                    <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.0-0/p206x206/13501765_1629945693990933_2515797676890673006_n.jpg?_nc_cat=104&_nc_ht=scontent.ffra1-1.fna&oh=9ce8116755f51cef0a52234b9d365c65&oe=5CC705C2">
-                  </div>
-                  <div class="col-sm-12 col-md-9 my-quote text-left">
-                    <p>Nhiều người hỏi tôi yêu hay ăn bánh của Penguin Backery quan trọng hơn…? Tôi không trả lời vì khi đó tôi đang nhai.</p>
-                    <small>Lưu Hữu Khải - sinh viên chưa tốt nghiệp</small>
-                  </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote>
+              <div class="row">
+                <div class="col-sm-12 col-md-3  text-right quote-div-img">
+                  <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.0-0/p206x206/13501765_1629945693990933_2515797676890673006_n.jpg?_nc_cat=104&_nc_ht=scontent.ffra1-1.fna&oh=9ce8116755f51cef0a52234b9d365c65&oe=5CC705C2">
                 </div>
-              </blockquote>
-            </div>
+                <div class="col-sm-12 col-md-9 my-quote text-left">
+                  <p>Nhiều người hỏi tôi yêu hay ăn bánh của Penguin Backery quan trọng hơn…? Tôi không trả lời vì
+                    khi đó tôi đang nhai.</p>
+                  <small>Lưu Hữu Khải - sinh viên chưa tốt nghiệp</small>
+                </div>
+              </div>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote>
+              <div class="row">
+                <div class="col-md-3 col-sm-12 text-right quote-div-img">
+                  <img class="rounded-circle quote-img" src="https://scontent.ffra1-1.fna.fbcdn.net/v/t1.0-0/p206x206/557446_471491732862014_216087201_n.jpg?_nc_cat=109&_nc_ht=scontent.ffra1-1.fna&oh=9b7a1492a3e7fcf43c0340f3861dc639&oe=5CC42371">
+                </div>
+                <div class="col-md-9 col-sm-12 my-quote text-left">
+                  <p>Nếu như ăn bánh của Penguin Backery là sai... thì tôi không cần đúng</p>
+                  <small>Lưu Hữu Duy - người vô danh</small>
+                </div>
+              </div>
+            </blockquote>
           </div>
         </div>
+        <a class="carousel-control-prev" href="#quote-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#quote-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
   </div>
@@ -277,65 +294,43 @@
 
   <!--footer starts from here-->
   <!--footer starts from here-->
-  <footer class="footer">
+  <footer class="footer" id="others">
     <div class="container bottom_border">
       <div class="row">
-        <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+        <div class=" col-sm-4 col-md col-sm-4  col-12 col text-center">
           <img src="images/logo.png" class="rounded-circle img_amrc col_white_amrc" />
           <!--headin5_amrc-->
-          <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-            been the industry's standard dummy text ever since the 1500s</p>
-          <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
-          <p><i class="fa fa-phone"></i> +91-9999878398 </p>
-          <p><i class="fa fa fa-envelope"></i> info@example.com </p>
-
-
-        </div>
-
-
-        <div class=" col-sm-4 col-md  col-6 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-          <!--headin5_amrc-->
-          <ul class="footer_ul_amrc">
-            <li><a href="https://kkhanhluu.github.io/">Image Rectoucing</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Clipping Path</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Hollow Man Montage</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Ebay & Amazon</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Hair Masking/Clipping</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Image Cropping</a></li>
+          <p class="mb10">The quality of each man's life is the full measure of that man's personal commitment to
+            excellence and to victory.</p>
+          <ul class="social_footer_ul">
+            <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-instagram"></i></a></li>
           </ul>
-          <!--footer_ul_amrc ends here-->
         </div>
 
-
-        <div class=" col-sm-4 col-md  col-6 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
-          <!--headin5_amrc-->
-          <ul class="footer_ul_amrc">
-            <li><a href="https://kkhanhluu.github.io/">Remove Background</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Shadows & Mirror Reflection</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Logo Design</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Vectorization</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Hair Masking/Clipping</a></li>
-            <li><a href="https://kkhanhluu.github.io/">Image Cropping</a></li>
-          </ul>
-          <!--footer_ul_amrc ends here-->
+        <div class=" col-sm-4 col-md  col-6 col text-center">
+          <h5 class="headin5_amrc col_white_amrc pt2">Contact with me</h5>
+          <p>Số 123, tổ 30, phường Vĩnh Phúc, Ba Đình, Hà Nội</p>
+          <p>015226610649</p>
         </div>
 
-
-        <div class=" col-sm-4 col-md  col-12 col">
-          <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+        <div class=" col-sm-4 col-md  col-12 col text-center">
+          <h5 class="headin5_amrc col_white_amrc pt2">Time to open</h5>
           <!--headin5_amrc ends here-->
 
           <ul class="footer_ul2_amrc">
-            <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
+            <li>
+              Monday-Friday:
             </li>
-            <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
+            <li>
+              08:00 am - 08:30 pm
             </li>
-            <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-              <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a></p>
+            <li>
+              Saturday - Sunday:
+            </li>
+            <li>
+              08:00 am - 08:30 pm
             </li>
           </ul>
           <!--footer_ul2_amrc ends here-->
@@ -345,24 +340,8 @@
 
 
     <div class="container">
-      <ul class="foote_bottom_ul_amrc">
-        <li><a href="https://kkhanhluu.github.io/">Home</a></li>
-        <li><a href="https://kkhanhluu.github.io/">About</a></li>
-        <li><a href="https://kkhanhluu.github.io/">Services</a></li>
-        <li><a href="https://kkhanhluu.github.io/">Pricing</a></li>
-        <li><a href="https://kkhanhluu.github.io/">Blog</a></li>
-        <li><a href="https://kkhanhluu.github.io/">Contact</a></li>
-      </ul>
       <!--foote_bottom_ul_amrc ends here-->
-      <p class="text-center">Copyright @2017 | Designed With by <a href="#">Kim Khanh Luu</a></p>
-
-      <ul class="social_footer_ul">
-        <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-linkedin"></i></a></li>
-        <li><a href="https://kkhanhluu.github.io/"><i class="fab fa-instagram"></i></a></li>
-      </ul>
-      <!--social_footer_ul ends here-->
+      <p class="text-center">Copyright @2018 | Designed With by <a href="https://kkhanhluu.github.io/">Kim Khanh Luu</a></p>
     </div>
 
   </footer>
@@ -374,23 +353,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script>
-    $('.contact-us').parallax({
-      imageSrc: 'images/b7.png'
-    });
-
-    $('.count').each(function () {
-      $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-      }, {
-        duration: 10000,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        }
-      });
-    });
-  </script>
+  <script src="js/backery.js"></script>
 </body>
 
 </html>
